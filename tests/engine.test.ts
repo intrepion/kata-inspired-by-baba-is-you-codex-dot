@@ -52,3 +52,8 @@ describe('discrete movement and interaction',()=>{
   expect(g).toEqual(initial);expect(initial.turns).toBe(0);
  });
 });
+
+it('a SINK-consumed WIN word cannot win with a stale rule',()=>{
+ const g=createGame(board([...rule('MOTH','YOU'),...rule('BEACON','WIN',1),...rule('POND','SINK',2),{id:40,noun:'MOTH',x:5,y:5},{id:41,noun:'BEACON',x:5,y:5},{id:42,noun:'POND',x:2,y:1}]));
+ const n=turn(g,'.');expect(n.won).toBe(false);expect(parseRules(n.entities)).not.toContainEqual({subject:'BEACON',predicate:'WIN'});expect(undo(n)).toEqual(g);
+});

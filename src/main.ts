@@ -20,7 +20,7 @@ function render(){
  document.querySelector('nav')!.innerHTML=levels.map((l,i)=>`<button data-level="${i}" class="${i===progress.level?'selected':''}" ${i===progress.level?'aria-current="step"':''}><span>${String(i+1).padStart(2,'0')}</span>${l.title}<i>${progress.completed.includes(i)?'✓':'·'}</i></button>`).join('');
  el('progress').textContent=`${progress.completed.length} / 9 lights restored`;
  el('rules').innerHTML=rules.map(r=>`<div class="rule"><b>${r.subject}</b><span>IS</span><b class="${r.predicate}">${r.predicate}</b></div>`).join('')||'<p>No active rules. Undo to find your way back.</p>';
- el('message').textContent=!saved?'Your browser could not save. You can keep playing.':showHint?level.hint:!game.entities.some(e=>has(e,'YOU',rules))?'No YOU remains. Press Z to undo, or R to restart.':level.subtitle;
+ el('message').textContent=game.won?'Garden complete. A little light is restored. Choose Next garden, or undo to keep exploring.':!saved?'Your browser could not save. You can keep playing.':showHint?level.hint:!game.entities.some(e=>has(e,'YOU',rules))?'No YOU remains. Press Z to undo, or R to restart.':level.subtitle;
  el('completion').hidden=!game.won;
  el('win-copy').textContent=progress.completed.length===9?'All nine lights are awake. The observatory remembers. Revisit any garden to discover another way.':`Light ${progress.level+1} of 9 is awake. Take this thought into the next garden.`;
  el('next').textContent=progress.level===8?'Return to first garden ↺':'Next garden →';

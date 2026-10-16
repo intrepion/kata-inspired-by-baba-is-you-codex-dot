@@ -97,6 +97,7 @@ export function turn(game: Game, direction: Direction): Game {
     if (has(e,'YOU',rules) && others.some(o=>has(o,'DEFEAT',rules))) removed.add(e.id);
   }
   next.entities = next.entities.filter(e=>!removed.has(e.id));
+  rules = parseRules(next.entities);
   next.won = next.entities.some(e=>has(e,'YOU',rules) && next.entities.some(o=>o.x===e.x && o.y===e.y && has(o,'WIN',rules)));
   return next;
 }

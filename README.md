@@ -4,6 +4,8 @@ A complete little browser puzzle game about a lantern moth and a forgotten obser
 
 Inspired by **Baba Is You**, created by Arvi Teikari / Hempuli. This is an independent learning project with original names, SVG art, story, interface and authored levels; no original game assets or level layouts are included.
 
+![Axiom Garden game board](docs/preview.png)
+
 ## Play locally
 
 Requires Node.js 24 and npm.

@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test';
-import replays from '../../src/replays.json';
+import replays from '../../src/replays.json' with {type:'json'};
 const keys:Record<string,string>={U:'ArrowUp',D:'ArrowDown',L:'ArrowLeft',R:'ArrowRight','.':'Space'};
 test('all nine gardens complete using keyboard inputs and save through reload',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/');
@@ -7,6 +7,7 @@ test('all nine gardens complete using keyboard inputs and save through reload',a
   await page.getByRole('navigation',{name:'Gardens'}).getByRole('button').nth(i).click();
   for(const d of replays[i])await page.keyboard.press(keys[d]);
   await expect(page.getByRole('heading',{name:'Beautifully rewritten.'})).toBeVisible();
+  await expect(page.getByRole('status')).toContainText('Garden complete');
   await page.reload();await expect(page.getByRole('heading',{name:'Beautifully rewritten.'})).toBeVisible();
  }
  await expect(page.locator('#progress')).toHaveText('9 / 9 lights restored');expect(errors).toEqual([]);

@@ -30,7 +30,7 @@ export const levels: Level[]=[
     t.sentence(['BEACON','IS','WIN'],6,1);t.object('MOTH',2,8);t.object('SEED',11,8);t.object('BEACON',13,8);t.divide(9);t.sentence(['SEED','IS'],4,5);t.word('YOU',6,6);
   }),
   makeLevel('A small sacrifice','SINK consumes itself and everything sharing its cell.','Complete CRATE IS PUSH, then push the crate into one pond tile to open a crossing.',t=>{
-    t.sentence(['BEACON','IS','WIN'],6,1);t.sentence(['POND','IS','SINK'],11,1);t.object('MOTH',2,8);t.object('BEACON',13,8);t.column('POND',9);t.object('CRATE',8,8);t.sentence(['CRATE','IS'],4,5);t.word('PUSH',6,6);
+    t.sentence(['BEACON','IS','WIN'],6,1);t.sentence(['POND','IS','SINK'],11,1);t.object('MOTH',2,8);t.object('BEACON',13,8);t.column('POND',9);t.object('CRATE',8,8);t.sentence(['CRATE','IS'],6,3,true);t.word('PUSH',6,6);for(let y=3;y<=6;y++){t.terrain[y][5]='#';t.terrain[y][7]='#';}
   }),
   makeLevel('Unlearn the flame','An ember is dangerous only while DEFEAT is true. Undo always brings you back.','Break EMBER IS DEFEAT before walking across the ember curtain.',t=>{
     t.sentence(['BEACON','IS','WIN'],6,1);t.object('MOTH',2,8);t.object('BEACON',13,8);t.column('EMBER',10);t.sentence(['EMBER','IS','DEFEAT'],3,5);
@@ -42,6 +42,6 @@ export const levels: Level[]=[
     t.sentence(['BEACON','IS','WIN'],6,1);t.sentence(['SEED','IS','YOU'],11,1);t.object('MOTH',2,8);t.object('CRATE',11,8);t.object('BEACON',13,8);t.divide(9);t.sentence(['CRATE','IS'],6,4,true);t.word('SEED',7,6);
   }),
   makeLevel('The garden remembers','Rewrite the barrier, offer a piece to the water, and carry the last light home.','Make WALL IS CRATE. CRATE IS PUSH is already true. Push one transformed wall twice into the pond, then cross.',t=>{
-    t.sentence(['BEACON','IS','WIN'],6,1);t.sentence(['CRATE','IS','PUSH'],11,1);t.object('MOTH',2,8);t.object('BEACON',14,8);t.column('WALL',10);t.column('POND',12);t.sentence(['POND','IS','SINK'],2,3);t.sentence(['WALL','IS'],5,5);t.word('CRATE',7,6);
+    t.sentence(['BEACON','IS','WIN'],6,1);t.sentence(['CRATE','IS','PUSH'],11,1);t.object('MOTH',2,8);t.object('BEACON',14,8);t.column('WALL',10);t.column('POND',12);t.sentence(['POND','IS','SINK'],2,3);t.sentence(['WALL','IS','STOP'],2,4);t.sentence(['WALL','IS'],5,5);t.word('CRATE',7,6);
   })
 ];
