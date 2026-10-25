@@ -89,3 +89,7 @@ Research: the [developer/publisher store description](https://store.steampowered
 ## License
 
 MIT — see the full [LICENSE](LICENSE). Official github/gitignore Global Linux, Windows and macOS contents are included in `.gitignore`, followed by project ignores; provenance is recorded in `docs/GITIGNORE-SOURCES.md`.
+
+## Play online
+
+[Play the hosted game](https://intrepion.github.io/kata-inspired-by-baba-is-you-codex-dot/)
