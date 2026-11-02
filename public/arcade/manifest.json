@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "gameId": "kata-inspired-by-baba-is-you-codex-dot",
   "playUrl": "https://intrepion.github.io/kata-inspired-by-baba-is-you-codex-dot/",
   "screenshots": [
@@ -12,6 +12,46 @@
         "sourcePath": "docs/preview.png",
         "deployedBuild": null,
         "captureDate": null
+      }
+    },
+    {
+      "path": "arcade/screenshots/ci-20261102-01.jpg",
+      "sha256": "ed4f9b64e7469a6274d033d0494ae4d20f2ed388ba3f936c9ac8ee7a59cdf47a",
+      "alt": "Axiom Garden gameplay, view 1",
+      "provenance": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261102-01.png",
+        "sourceSha256": "4d5043a9e439ca0f2444528b469d5c40217a97d70e72820b66955ec65b72b8c9",
+        "captureCommit": "201bb1d43fe7daa1264170ee42ca3927e231a7fa",
+        "workflowRunId": "41407684791",
+        "inputHashes": {
+          "index.html": "2094da835ac4f658f6edb6f44b3f9ed9f930c8d065b97d75c7fa12d9fda8c10a",
+          "assets/index-CRuVGEL8.js": "5f72dd111fe57a13b80a16569a738d8364efb33407ed50223b3c4ae107905917",
+          "assets/index-UKOG6Q0y.css": "6b3002f48079f0b3663a1fbaa1e090e27268b959926f3320acfbd3b7f363638f"
+        },
+        "publishedFilesVerifiedAt": "2026-11-02T19:01:20Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261102-record.json",
+        "captureRecordSha256": "021faa13aa137ae28e515a71ae9304c8cb808e5b0ce773a243516a8561317c4b"
+      }
+    },
+    {
+      "path": "arcade/screenshots/ci-20261102-02.jpg",
+      "sha256": "d0317aa984254eefdfbe757e40e67862efdaa1453668c36fb5db2ff54949e7b6",
+      "alt": "Axiom Garden gameplay, view 2",
+      "provenance": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261102-02.png",
+        "sourceSha256": "8877043ce4c5bc3e38ac0da2df32a017f3026fd2dfa2fd7c4bb2bbe896f9a1d3",
+        "captureCommit": "201bb1d43fe7daa1264170ee42ca3927e231a7fa",
+        "workflowRunId": "41407684791",
+        "inputHashes": {
+          "index.html": "2094da835ac4f658f6edb6f44b3f9ed9f930c8d065b97d75c7fa12d9fda8c10a",
+          "assets/index-CRuVGEL8.js": "5f72dd111fe57a13b80a16569a738d8364efb33407ed50223b3c4ae107905917",
+          "assets/index-UKOG6Q0y.css": "6b3002f48079f0b3663a1fbaa1e090e27268b959926f3320acfbd3b7f363638f"
+        },
+        "publishedFilesVerifiedAt": "2026-11-02T19:01:20Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261102-record.json",
+        "captureRecordSha256": "021faa13aa137ae28e515a71ae9304c8cb808e5b0ce773a243516a8561317c4b"
       }
     }
   ]
